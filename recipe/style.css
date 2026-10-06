@@ -1,0 +1,457 @@
+/* 기본 초기화 및 여백 제거 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-family:Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+
+.hero-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+
+.brand-logo {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+}
+
+.brand-logo img {
+  height: 80px; 
+  width: auto;
+  display: block;
+  margin-top: -80px;
+}
+
+
+.kimbap-menu {
+  position: absolute;
+  left: 0;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+
+.menu-item {
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  cursor: pointer;
+}
+
+.menu-item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+
+.bar-img {
+  display: block;
+  height: 50px; 
+  width: auto;
+}
+
+
+.bar-ham     { margin-top: 252px; }
+.bar-ham     { margin-left: -130px; }
+.bar-ham     { margin-bottom: 20px; }
+.bar-danmuji { margin-bottom: 20px; }
+.bar-oi      { margin-bottom: 20px; }
+.bar-uung    { margin-bottom: 90px; } 
+.bar-uung    { margin-left: -80px; } 
+.bar-spi     { margin-bottom: 0px;  }
+.bar-spi     { margin-left: -80px;  }
+
+
+.label {
+  margin-left: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #111111;
+  letter-spacing: -0.5px;
+  opacity: 0; 
+  transform: translateX(-15px); 
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+
+.menu-item:hover {
+  transform: translateX(55px);
+}
+
+
+.menu-item:hover .label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.recipe-card {
+  max-width: 650px;
+  margin: 40px auto 0 auto; 
+  display: flex;
+  flex-direction: column;  
+  align-items: center;    
+}
+
+.step-description {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 60px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: #111111;
+  line-height: 1.4;
+  margin-bottom: 70px;
+  margin-top: -10px;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 0.8;
+}
+
+.step-description-long {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: #111111;
+  line-height: 1.4;
+  margin-bottom: 55px;
+  margin-top: -20px;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 0.5;
+}
+
+.step-description-short {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 60px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: #111111;
+  line-height: 1.4;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  width:100%;
+  text-align: left;
+  line-height: 1;
+  align-self: flex-start;
+}
+
+.recipe-img-box {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.recipe-img-box-first {
+  width: 100%;
+  padding-top: 90px; 
+  padding-bottom: 20px; 
+}
+
+.recipe-img-box-first img {
+  width: 100%;
+  max-height: 650px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.recipe-img-box img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: contain; 
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.recipe-img-box-ending {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;    
+  margin-right: -50vw;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.recipe-img-box-ending img {
+  width: 85%;     
+  max-width: 800px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin-top: 260px;
+  margin-right: 700px;
+}
+
+.page-container.ending-page-container {
+  max-width: 100%;
+  width: 100%;
+  padding: 40px 60px;
+  box-sizing: border-box;
+}
+
+.recipe-card.ending-card {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.ending-card .step-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.step-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+ 
+}
+
+.nav-arrow {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 34px;
+  color: #111111;
+  text-decoration: none;
+  letter-spacing: -0.3px;
+  padding: 8px 16px;
+  transition: all 0.2s ease;
+}
+
+.nav-arrow:hover {
+  opacity: 0.5;
+  transform: translateX(-2px);
+}
+
+.step-indicator {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  color: #888888;
+  letter-spacing: 1px;
+}
+
+
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.page-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+
+.fade-in-up {
+  animation: fadeInUp 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.ingredients-table {
+  width: 100%;
+  max-width: 580px;
+  margin: 60px auto 130px auto; 
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: left;
+}
+
+
+.ing-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 4px;
+  font-size: 16px;
+  letter-spacing: -0.3px;
+  color: #222222;
+}
+
+
+.ing-row.header-row {
+  border-bottom: 2px solid #111111; 
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+}
+
+.ing-row.section-gap {
+  margin-top: 36px; 
+}
+
+
+.ing-category, .ing-qty {
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: #111111;
+}
+
+
+.ing-name {
+  font-weight: 500;
+}
+
+.ing-name small {
+  font-size: 16px;
+  color: #888888;
+  margin-left: 6px;
+}
+
+
+.ing-detail {
+  font-size: 16px;
+  color: #666666;
+  font-weight: 400;
+}
+
+
+
+
+
+.ingredients-interactive-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  
+  gap: 12px;                
+  margin-left: -360px;
+  margin-top: 107px;
+  margin-bottom: 77px;
+  align-items: left;
+}
+
+
+.ing-item {
+  display: flex;
+  align-items: left;     
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+
+.ing-img {
+  height: 30px;           
+  width: auto;            
+  display: block;
+}
+
+
+.ing-label {
+  margin-left: 16px;      
+  font-family: "Google Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #111111;
+  white-space: nowrap;
+  opacity: 0;            
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+.ing-label small {
+  font-size: 12px;
+  font-weight: 400;
+  color: #777777;
+  margin-left: 6px;
+}
+
+
+.ing-item:hover {
+  transform: translateX(40px);
+}
+
+.ing-item:hover .ing-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* ==========================================
+   친구들 소감 페이지 전용 (가로 파노라마 연출)
+   ========================================== */
+
+.step-description-cook {
+  font-family: 'Helvetica Neue', 'Google Sans', 'Noto Sans KR', sans-serif; /* 한글 폰트 fallback 추가 */
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: #111111;
+  margin-bottom: 35px;
+  margin-top: -20px;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 1;
+}
+
+.cook-img-box {
+  width: 100vw;               /* 화면 전체 가로 폭 */
+  position: relative;
+  left: 50%;                  /* 화면 절반 지점으로 이동 */
+  transform: translateX(-50%);/* 정확히 화면 절대 중앙에 정렬 */
+  display: flex;
+  flex-direction: row;        /* 가로 배치 */
+  justify-content: center;    /* 사진들을 가운데 기준으로 모음 */
+  align-items: center;
+  gap: 12px;                  /* 사진 간격 (더 다다닥 붙이려면 0~6px) */
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 850px;
+  overflow: hidden;           /* 가로 스크롤바 제거 */
+  box-sizing: border-box;
+}
+
+.cook-img-box img {
+  height: 280px;              /* 사진 세로 높이 */
+  width: auto;                /* 원본 비율 유지 */
+  flex-shrink: 0;             /* 사진 비율 찌그러짐 방지 */
+  object-fit: cover;
+  display: block;
+}
+
+.step-description-cook-comment {
+  font-family: 'Helvetica Neue', 'Google Sans', 'Noto Sans KR', sans-serif; /* 한글 폰트 fallback 추가 */
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: #111111;
+  text-align: center;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 40px;
+  word-break: keep-all; /* 한글 단어 단위 줄바꿈 유지 */
+
+  width: 70vw;                  /* 화면 가로 폭의 90%까지 시원하게 사용 */
+  position: relative;
+}
